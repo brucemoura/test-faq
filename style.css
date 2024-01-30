@@ -22,13 +22,19 @@
   --font-bold: 'Work bold';
   --font-regular: 'Work regular';
   --font-semi-bold: 'Work semi';
+  
+  --cor-01:white;
+  --cor-02:#f9eeff;
+  --cor-03:#301534;
+  --cor-04:#ad28eb;
+  --cor-05:#EFEFEF;
 }
 
 .background{
   max-width: 87.5rem;
   min-height: 50rem;
   margin: 3.125rem auto;
-  background-color: #f9eeff;
+  background-color: var(--cor02);
   background-image: url(images/background-pattern-desktop.svg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -38,7 +44,7 @@
 }
 
 .container{
-  background-color: white;
+  background-color: var(--cor-01);
   max-width: 34.375rem;
   padding: 30px;
   margin: 50px;
@@ -54,7 +60,7 @@ main{
 .titulo{
   font-size: 48px;
   font-family: var(--font-bold);
-  color: #301534;
+  color: var(--cor-03);
   display: block;
 }
 
@@ -64,11 +70,11 @@ section{
 
 .titulo-faq{
   font-family: var(--font-semi-bold);
-  color: #301534;
+  color: var(--cor-03);
   cursor: pointer;
 }
 .titulo-faq:hover {
-  color: #ad28eb;
+  color: var(--cor-04);
 }
 
 img{
@@ -123,7 +129,7 @@ img{
 hr{
   max-width: 95%;
   margin: 20px auto;
-  border: 1px solid #EFEFEF;
+  border: 1px solid var(--cor-05);
 }
 
 @media (max-width: 1400px) {
