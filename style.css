@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Work bold';
+  src: url(fonts/WorkSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Work regular';
+  src: url(fonts/WorkSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Work semi';
+  src: url(fonts/WorkSans-SemiBold.ttf);
+}
+
+:root{
+  --font-bold: 'Work bold';
+  --font-regular: 'Work regular';
+  --font-semi-bold: 'Work semi';
+}
+
+.background{
+  max-width: 87.5rem;
+  min-height: 50rem;
+  margin: 3.125rem auto;
+  background-color: #f9eeff;
+  background-image: url(images/background-pattern-desktop.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: white;
+  max-width: 34.375rem;
+  padding: 30px;
+  margin: 50px;
+  border-radius: 5px;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.titulo{
+  font-size: 48px;
+  font-family: var(--font-bold);
+  color: #301534;
+  display: block;
+}
+
+section{
+  margin: 20px 0;
+}
+
+.titulo-faq{
+  font-family: var(--font-semi-bold);
+  color: #301534;
+  cursor: pointer;
+}
+.titulo-faq:hover {
+  color: #ad28eb;
+}
+
+img{
+  display: block;
+}
+
+.bg-image.ativo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url(images/icon-minus.svg);
+  background-position: center;
+}
+
+.bg-image {
+  min-width: 24px;
+  min-width: none;height: 24px;
+  border-radius: 50%;
+  background-image: url(images/icon-plus.svg);
+  background-position: center;
+}
+
+.descricao-faq{
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: var(--font-regular);
+  display: none;
+}
+.descricao-faq.ativo {
+  display: block;
+  animation: slidedown .5s forwards;
+}
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+
+.titulo-icon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+hr{
+  max-width: 95%;
+  margin: 20px auto;
+  border: 1px solid #EFEFEF;
+}
+
+@media (max-width: 1400px) {
+  .background {
+    margin: 0 auto;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 590px) {
+  .background {
+    padding-top: 100px;
+  }
+}
+
+
